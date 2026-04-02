@@ -1,0 +1,48 @@
+
+{% for content in shop.metaobjects.custom_content.values %}
+  
+
+<div class="image-with-text image-right">
+    <div class="image-container">
+            {{ content.image | image_url: 'master' | image_tag: alt: content.image.alt }}
+    </div>
+    <div class="text-container">
+        <h2>{{ content.name }}</h2>
+        {{ content.definition }}
+    </div>
+</div>
+{% endfor %}
+<style>
+    .image-with-text {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .image-right {
+        flex-direction: row-reverse;
+    }
+    .image-container {
+        flex: 1;
+    }
+    .text-container {
+        flex: 1;
+    }
+    @media (max-width: 768px) {
+        .image-with-text {
+            flex-direction: column;
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Image with Text",
+    "settings": [
+    ],
+    "presets": [
+        {
+            "name": "Custom Content"
+        }
+    ]
+}
+{% endschema %}
