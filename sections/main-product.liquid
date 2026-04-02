@@ -105,7 +105,9 @@
                     </h2>
                   </a>
                 </div>
-                <div class="subtitle">{{ custom.product_subtitle.value }}</div>
+                {% for content in custom.product_subtitle.value %}
+                <div class="subtitle">{{ content }}</div>
+                {% endfor %}
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
