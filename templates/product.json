@@ -19,13 +19,6 @@
             "text_style": "uppercase"
           }
         },
-        "text_rLHV8a": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.product_subtitle.value }}",
-            "text_style": "body"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -108,7 +101,6 @@
       },
       "block_order": [
         "vendor",
-        "text_rLHV8a",
         "title",
         "caption",
         "price",
