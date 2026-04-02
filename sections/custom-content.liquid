@@ -4,7 +4,7 @@
 
 <div class="image-with-text image-right">
     <div class="image-container">
-            {{ content.image | image_url: 'master' }}
+            <img src="{{ content.image | image_url: 'master' }}" alt="{{ content.image.alt }}">
     </div>
     <div class="text-container">
         <h2>{{ content.name }}</h2>
