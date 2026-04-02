@@ -3,7 +3,7 @@
 
 <div class="page-width image-with-text image-right">
   <div class="image-container">
-    <img src="{{ content.image | image_url: 'master' }}" alt="{{ content.image.alt }}">
+    {{ content.image | image_url: width: '600' | image_tag: alt: content.image.alt }}
   </div>
 
   <div class="text-container">
