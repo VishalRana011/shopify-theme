@@ -1,16 +1,17 @@
 
 {% for content in shop.metaobjects.custom_content.values %}
-  
 
 <div class="image-with-text image-right">
-    <div class="image-container">
-            <img src="{{ content.image | image_url: 'master' }}" alt="{{ content.image.alt }}">
-    </div>
-    <div class="text-container">
-        <h2>{{ content.name }}</h2>
-        {{ content.definition }}
-    </div>
+  <div class="image-container">
+    {{ content.image | image_url: width: 800 | image_tag: alt: content.image.alt }}
+  </div>
+
+  <div class="text-container">
+    <h2>{{ content.name }}</h2>
+    <p>{{ content.description }}</p>
+  </div>
 </div>
+
 {% endfor %}
 <style>
     .image-with-text {
