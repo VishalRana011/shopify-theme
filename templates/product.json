@@ -136,7 +136,7 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "{{ product.metafields.custom.custom_data.value.custom_content.value }}",
+            "heading": "{{ product.metafields.custom.custom_data.value.title.value }}",
             "heading_size": "h1"
           }
         },
