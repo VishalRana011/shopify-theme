@@ -105,7 +105,7 @@
                     </h2>
                   </a>
                 </div>
-                {% for content in custom.product_subtitle %}
+                {% for content in product.metafields.custom.product_subtitle %}
                 <div class="subtitle">{{ content.value }}</div>
                 {% endfor %}
               {%- when 'price' -%}
